@@ -14,14 +14,14 @@ const Preview = (props) => {
     let rawHtml = marked(props.content);
     
     return ( 
-        <div className="preview-wrapper">
-            <h2>Output</h2>
+        
+            
             <div id="preview" className="preview"
             dangerouslySetInnerHTML={{ __html: rawHtml }}
             >
             </div>
 
-        </div>
+        
      );
 }
  

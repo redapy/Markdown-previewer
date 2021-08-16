@@ -4,14 +4,58 @@ import React from "react";
 
 const Editor = () => {
 
-    const string = "# Markdown Text goes here\n## You can also make subheadings\n\nOne of the **trickiest** parts of getting this project to work was learning how to use `dangerouslySetInnerHTML` to make the previewer display the output of [marked.js](https://github.com/markedjs/marked/blob/master/README.md) as HTML instead of a string.\n\nAccording to the React Documentation,\n>dangerouslySetInnerHTML is React’s replacement for using innerHTML in the browser DOM. In general, setting HTML from code is risky because it’s easy to inadvertently expose your users to a cross-site scripting (XSS) attack.\n\nExample Code:\n```\nfunction createMarkup() {\n  return {__html: 'First &middot; Second'};\n}\n\nfunction MyComponent() {\n  return <div dangerouslySetInnerHTML={createMarkup()} />;\n}\n```\n\nJust remember to:\n- Search, Read, Ask\n- Ask for help on the Forum (that's what worked for me.)\n\n![Vipatron icon](http://vipinjeetsandhu.com/images/BW_Scaryface_icon.jpg 'Vip face1')\n\n![Vipatron icon][picref]\n\n[picref]: http://vipinjeetsandhu.com/images/BW_Scaryface_icon.jpg 'Vip face2'\n";
+    const string = `# Welcome to my React Markdown Previewer!
+
+## This is a sub-heading...
+### And here's some other cool stuff:
+
+Heres some code, \`<div></div>\`, between 2 backticks.
+
+\`\`\`
+// this is multi-line code:
+
+function anotherExample(firstLine, lastLine) {
+  if (firstLine == '\`\`\`' && lastLine == '\`\`\`') {
+    return multiLineCode;
+  }
+}
+\`\`\`
+
+You can also make text **bold**... whoa!
+Or _italic_.
+Or... wait for it... **_both!_**
+And feel free to go crazy ~~crossing stuff out~~.
+
+There's also [links](https://www.freecodecamp.org), and
+> Block Quotes!
+
+And if you want to get really crazy, even tables:
+
+Wild Header | Crazy Header | Another Header?
+------------ | ------------- | -------------
+Your content can | be here, and it | can be here....
+And here. | Okay. | I think we get it.
+
+- And of course there are lists.
+  - Some are bulleted.
+     - With different indentation levels.
+        - That look like this.
+
+
+1. And there are numbered lists too.
+1. Use just 1s if you want!
+1. And last but not least, let's not forget embedded images:
+
+![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)
+`;
     const [content, setContent] = useState(string);
+    
     
 
     return ( 
         <div className="wrapper">
             <form className="form">
-                <label htmlFor="editor">Editor</label>
+                <label htmlFor="editor"></label>
                 <textarea  id="editor"
                  className="input"
                  cols="100" rows="40"
@@ -24,6 +68,7 @@ const Editor = () => {
 
         
      );
+     
 }
  
 export default Editor;
