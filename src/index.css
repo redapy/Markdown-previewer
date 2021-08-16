@@ -35,7 +35,8 @@ Body {
   color: aqua;
   background-color: black;
   min-width: 40%;
-  padding: 0.5em
+  padding: 0.3em;
+  
 }
 
 
@@ -58,7 +59,7 @@ Body {
     max-width: 100%;
     padding-left: 1em;
     padding-top: 1em;
-	box-shadow: 5px 10px 18px black;
+	box-shadow: 5px 10px 18px aqua;
     
 }
 
@@ -66,11 +67,11 @@ Body {
 #preview {
   max-width: 40%;
   min-width: 30%;
-  border:1px solid black;
+  border:1px solid aqua;
   overflow-wrap: break-word; 
   padding: 0 1em;
   margin-bottom: 2em;
-  box-shadow: 5px 10px 18px black;
+  box-shadow: 5px 10px 18px aqua;
 }
 
 
@@ -113,7 +114,7 @@ ol,ul {
 }
 
 ol ul, ol ol, ul ul, ul ol {
-	margin-left: 2rem;
+	margin-left: 2em;
 	margin-bottom: .75rem;
 }
 
@@ -137,7 +138,7 @@ abbr[title]:hover {
 blockquote {
 	border-left: 5px solid #333;
 	padding-left: .75em;
-	margin-left: calc(-.75em - 5px);
+	margin-left: 0.5em;
 	
 	font-style: italic;
 }
