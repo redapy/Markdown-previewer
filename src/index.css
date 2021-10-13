@@ -47,9 +47,7 @@ Body {
 }
 
 .form {
-    max-width: 40%;
-	
-    
+    max-width: 40%;   
 }
 
 .input {
@@ -69,7 +67,7 @@ Body {
   min-width: 30%;
   border:1px solid aqua;
   overflow-wrap: break-word; 
-  padding: 0 1em;
+  padding: 0 2em;
   margin-bottom: 2em;
   box-shadow: 5px 10px 18px aqua;
 }
@@ -119,7 +117,7 @@ ol ul, ol ol, ul ul, ul ol {
 }
 
 li {
-	margin: .5em 0;
+	margin: 1.5em 0;
 }
 
 abbr {

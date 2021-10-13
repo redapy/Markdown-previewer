@@ -1,10 +1,33 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Preview from "./Preview";
-import React from "react";
+
 
 const Editor = () => {
 
-    const string = `# Welcome to my React Markdown Previewer!
+
+    const [content, setContent] = useState(string);
+    
+    return ( 
+        <div className="wrapper">
+            <form className="form">
+                <label htmlFor="editor"></label>
+                <textarea  
+                    id="editor"
+                    className="input"
+                    cols="100" rows="40"
+                    value={content} 
+                    onChange={(e) => setContent(e.target.value)}
+                 ></textarea>
+            </form>
+            <Preview content={content}/>
+        </div>
+
+        
+     );
+     
+}
+
+const string = `# Welcome to my React Markdown Previewer!
 
 ## This is a sub-heading...
 ### And here's some other cool stuff:
@@ -48,27 +71,5 @@ And here. | Okay. | I think we get it.
 
 ![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)
 `;
-    const [content, setContent] = useState(string);
-    
-    
-
-    return ( 
-        <div className="wrapper">
-            <form className="form">
-                <label htmlFor="editor"></label>
-                <textarea  id="editor"
-                 className="input"
-                 cols="100" rows="40"
-                 value={content} 
-                 onChange={ (e) => setContent(e.target.value) }
-                 ></textarea>
-            </form>
-            <Preview content={content}/>
-        </div>
-
-        
-     );
-     
-}
  
 export default Editor;

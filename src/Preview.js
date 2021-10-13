@@ -1,27 +1,18 @@
-import marked from 'marked';
 import React from 'react';
+import marked from 'marked';
 
 const Preview = (props) => {
-    let marked = require("marked");
-
+    
     marked.setOptions({
         renderer: new marked.Renderer(),
-        gfm: true,
-        tables: true,
         breaks: true,
-        
       });
+
     let rawHtml = marked(props.content);
     
     return ( 
-        
-            
-            <div id="preview" className="preview"
-            dangerouslySetInnerHTML={{ __html: rawHtml }}
-            >
+            <div id="preview" className="preview" dangerouslySetInnerHTML={{ __html: rawHtml }}>
             </div>
-
-        
      );
 }
  
