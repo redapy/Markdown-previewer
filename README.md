@@ -7,8 +7,8 @@
 - [Basic writing and formatting syntax of GitHub flavored markdown](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 - [The react-marked documentation](https://www.npmjs.com/package/react-marked)
 ## Installation
-- First use `npm install` to install all the dependencies.
+- First, use `npm install` to install all the dependencies.
 - Start the devolopement server  `npm start`.
-- For more information please reffer to [react-app](/react-app.md)
+- For more information please refer to [react-app](/react-app.md)
 ## Try it !!
 https://redapy.github.io/Markdown-previewer/
